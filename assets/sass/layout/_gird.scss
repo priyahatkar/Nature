@@ -1,0 +1,29 @@
+.container{
+    max-width: 71.25rem;  // for long screen whos width is greater than 1140
+    width: 100%;  // for smaller screen whos width is <= 1140
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+[class ^= "col-"]{
+    padding: 0 1.5rem;
+}
+.col-3{
+    flex: 0 0 calc(100% * 3 / 12);
+}
+
+.col-4{
+    flex: 0 0 calc(100% * 4 / 12);
+}
+
+.col-6{
+    flex: 0 0 calc(100% * 6 / 12);
+}
+
+.col-9{
+    flex: 0 0 calc(100% * 9 / 12);
+}
