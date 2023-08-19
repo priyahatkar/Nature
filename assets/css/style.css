@@ -152,10 +152,38 @@ body {
   .compsition:hover .compsition-img:not(:hover) {
     transform: scale(0.9); }
 
+.feature-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2.5rem;
+  border-radius: 0.188rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: all .3s ease-in-out; }
+  .feature-card:hover, .feature-card:focus {
+    transform: translateY(-1.5rem) scale(1.05); }
+  .feature-card i {
+    font-size: 6rem;
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem; }
+
 .section-about {
   padding: 25rem 0;
   background-color: #f7f7f7;
   margin-top: -20rem; }
+
+.section-feature {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../images/nat-4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  transform: skewY(-7deg);
+  margin-top: -10rem; }
+  .section-feature > * {
+    transform: skewY(7deg); }
 
 .container {
   max-width: 1110px;
