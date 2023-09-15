@@ -1,6 +1,6 @@
 .container{
     max-width: 1110px;  // for long screen whos width is greater than 1140
-    // width: 100%;  // for smaller screen whos width is <= 1140
+    width: 100%;  // for smaller screen whos width is <= 1140
     margin: 0 auto;
 
 }
@@ -8,7 +8,9 @@
 .row{
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    &:not(:last-child){
+        margin-bottom: 8rem;
+    }
 }
 
 [class ^= "col-"]{

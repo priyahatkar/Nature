@@ -9,6 +9,10 @@
 html{
     font-size: 62.5%;
 }
+::selection{
+    background-color: $color-primary-dark;
+    color: $color-white;
+}
 body{
     font-weight: 400;
     line-height: 1.7;
