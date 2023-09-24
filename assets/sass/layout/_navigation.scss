@@ -1,0 +1,103 @@
+
+
+.navigation{
+    &-toggle{
+        width: 7rem;
+        height: 7rem;
+        background-color: $color-white;
+        border-radius: 50%;
+        position: fixed;
+        top: 4rem;
+        right: 4rem;
+        z-index: 100;
+        cursor: pointer;
+        box-shadow: 0 1rem 3rem rgba($color-dark, .1);
+        @include atCenter;
+    }
+    &-icon{
+        width: 3rem;
+        height: 2px;
+        background-color: $color-dark;
+        position: relative;
+        &::after, &::before{
+            content: '';
+            position: absolute;
+            width: 3rem;
+            height: 2px;
+            background-color: $color-dark;
+            transition: all .3s ease-in-out;
+        }
+        &::after{
+            top: .8rem;
+        }
+        &::before{
+            top: -.8rem;
+        }
+    }
+    &-background{
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 4rem;
+        right: 4rem;
+        z-index: 77;
+        cursor: pointer;
+        @include lg(to right bottom, $color-primary-light, $color-primary-dark);
+        transition: all 0.7s ease-in-out;
+    }
+    &-nav{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        z-index: 85;
+        @include atCenter;
+        transition: all .7s ease-in-out;
+    }
+    &-item{
+        margin: 1rem;
+    }
+    &-link{
+        &:link, &:visited{
+            display: inline-block;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 3rem;
+            color: $color-white;
+            padding: 1rem 2rem;
+            background-image: linear-gradient(125deg, transparent 0%, transparent 50%,$color-white 50%);
+            background-size: 225%;
+            transition: all .7s ease-in-out;
+            border-radius: 5%;
+        }
+        &:hover, &:focus{
+            color: $color-primary;
+            background-position: 100%;
+            // background-size: 100%;
+        }
+    }
+    &.active{
+        .navigation-icon{
+            background-color: transparent;
+            &::before{
+                top: 0;
+                transform: rotate(135deg);
+            }
+            &::after{
+                top: 0;
+                transform: rotate(-135deg);
+            }
+        }
+        .navigation-background{
+            transform: scale(60);
+        }
+        .navigation-nav{
+            left: 0;
+            opacity: 1;
+            animation: moveInLeft .6s ease-in-out;
+        }
+    }
+}

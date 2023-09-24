@@ -13,3 +13,39 @@
     -webkit-background-clip: text;
     color: transparent;
 }
+
+// @mixin responsive-phone{
+//     @media(max-width : 600px){
+        
+//     }
+// }
+
+// @mixin responsive-tabPort{
+//     @media(max-width : 900px){
+        
+//     }
+// }
+
+// @mixin responsive-tabLand{
+//     @media(max-width : 1200px){
+        
+//     }
+// }
+
+@mixin responsive($breakPoint){
+    @if $breakPoint == phone{
+        @media(max-width : 600px){
+            @content
+        }
+    }
+    @if $breakPoint == tabPort{
+        @media(max-width : 900px){
+            @content
+        }
+    }
+    @if $breakPoint == tabLand{
+        @media(max-width : 1200px){
+            @content
+        }
+    }
+}
